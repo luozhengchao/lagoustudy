@@ -2,12 +2,6 @@ package com.space.common.model;
 
 import lombok.Data;
 
-/**
- * designed by PENGJIAWEI039
- *
- * @author: PENGJIAWEI039
- * @DATE: 2018-12-11 11:08
- */
 @Data
 public class Pair<L, R> {
 

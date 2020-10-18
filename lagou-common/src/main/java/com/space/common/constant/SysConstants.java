@@ -58,16 +58,6 @@ public interface SysConstants {
     }
 
     /**
-     * 电催相关常量
-     */
-    interface TcConstants{
-        /** 电催返回code码：创建或修改数据成功*/
-        String CODE_SUCCESS_SAVE = "201";
-        /** 电催返回code码：接口查询操作成功返回码*/
-        String CODE_SUCCESS_QUERY = "000000";
-    }
-
-    /**
      * 数字常量（String）
      */
     interface StrNumber{
