@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<groupId>com.lagou</groupId>
+	<artifactId>lagoustudy</artifactId>
+	<packaging>pom</packaging>
+	<modelVersion>4.0.0</modelVersion>
+	<version>0.0.1</version>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.3.RELEASE</version>
+	</parent>
+
+	<modules>
+		<module>lagou-common</module>
+		<module>lagou-step1-spring</module>
+    </modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<lombok.version>1.16.18</lombok.version>
+		<spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+		<spring-cloud-starter-openfeign.version>2.2.0.RELEASE</spring-cloud-starter-openfeign.version>
+		<spring-cloud-starter-netflix.version>2.2.0.RELEASE</spring-cloud-starter-netflix.version>
+		<spring-cloud-openfeign-core.version>2.2.0.RELEASE</spring-cloud-openfeign-core.version>
+		<springfox.version>2.9.2</springfox.version>
+		<swaggerUI.version>1.8.8</swaggerUI.version>
+		<mybatis-plus.version>2.1.9</mybatis-plus.version>
+		<spring-cloud-mybatis-plus.version>1.0.5</spring-cloud-mybatis-plus.version>
+		<mybatis.version>1.3.2</mybatis.version>
+		<postgres.version>42.2.5</postgres.version>
+		<fastjson.version>1.2.60</fastjson.version>
+		<hutool.version>4.1.19</hutool.version>
+		<spring-web.version>5.1.2.RELEASE</spring-web.version>
+		<poi-ooxml.version>3.17</poi-ooxml.version>
+		<poi.verion>3.17</poi.verion>
+		<easyexcel.version>1.1.0</easyexcel.version>
+		<validation.version>2.0.1.Final</validation.version>
+		<transmittable-thread-local.version>2.11.0</transmittable-thread-local.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+
+			<!-- feign start -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-openfeign</artifactId>
+				<version>${spring-cloud-starter-openfeign.version}</version>
+			</dependency>
+			<!-- feign end -->
+
+			<!-- hystrix start -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+				<version>${spring-cloud-starter-netflix.version}</version>
+			</dependency>
+			<!-- hystrix end -->
+
+			<!-- ribbon start -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+				<version>${spring-cloud-starter-netflix.version}</version>
+			</dependency>
+			<!-- ribbon end -->
+
+			<!-- eureka start -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+				<version>${spring-cloud-starter-netflix.version}</version>
+			</dependency>
+			<!-- eureka end -->
+
+			<!-- swagger2 start-->
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${springfox.version}</version>
+			</dependency>
+			<!--替代官方UI-->
+			<dependency>
+				<groupId>com.github.xiaoymin</groupId>
+				<artifactId>swagger-bootstrap-ui</artifactId>
+				<version>${swaggerUI.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${springfox.version}</version>
+			</dependency>
+			<!-- swagger2 end-->
+
+			<!--hutool-->
+			<dependency>
+				<groupId>cn.hutool</groupId>
+				<artifactId>hutool-all</artifactId>
+				<version>${hutool.version}</version>
+			</dependency>
+
+			<!--poi start-->
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>${poi-ooxml.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>${poi.verion}</version>
+			</dependency>
+			<!--poi end-->
+
+			<!-- fastjson -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+
+			<!--easyexcel-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+
+			<!--ali ttl start-->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>transmittable-thread-local</artifactId>
+				<version>${transmittable-thread-local.version}</version>
+			</dependency>
+			<!--ali ttl end-->
+
+
+		</dependencies>
+	</dependencyManagement>
+
+</project>
